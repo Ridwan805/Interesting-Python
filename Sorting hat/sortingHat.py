@@ -93,8 +93,67 @@ def q1(n):
             button_8.destroy()
             button_9.destroy()
             button_10.destroy()
-            button_11 = Button(window, text= "Who won?",font=("Times new roman", 25), padx= 60, pady=30,borderwidth=4,command= veri)
-            button_11.place(x = 295, y = 140)
+
+            question_4 = Label(window, text="What would like for an activity?",font=("Times new Roman",25))
+            question_4.pack()
+            button_13 = Button(window, text= "1) Working with plants", padx= 45, pady=20,borderwidth=4,command=lambda: q4( "plants"))
+            button_14 = Button(window, text= "2) Strategic thinking", padx= 45, pady=20,borderwidth=4,command=lambda: q4( "stra"))
+            button_15 = Button(window, text= "3) Going on an Adventure", padx= 45, pady=20,borderwidth=4,command=lambda: q4( "adventure"))
+            button_16 = Button(window, text= "4) Solving puzzles", padx= 45, pady=20,borderwidth=4,command=lambda: q4( "puzzles"))
+            button_13.pack()
+            button_14.pack()
+            button_15.pack()
+            button_16.pack()
+            
+            def q4(n):
+                global griff 
+                global sly
+                global raven
+                global huff
+                global button_11
+                global done
+                if n == "plants":
+                  huff += 3
+                elif n == "stra":
+                    sly += 3
+                elif n == "puzzles":
+                    raven += 3
+                elif n == "adventure":
+                    griff += 3
+
+                question_4.destroy()
+                button_13.destroy()
+                button_14.destroy()
+                button_15.destroy()
+                button_16.destroy()
+                
+                question_5 = Label(window, text="Who was the founder of THE HOUSE HUFFLEPUFF?",font=("Times new Roman",25))
+                question_5.pack()
+                e = Entry(window, width= 60, border=5, borderwidth=4)
+            
+                e.pack()
+                x = e.get()
+                x.upper()    
+                button_17 = Button(window, text= "Next", padx= 45, pady=20,borderwidth=4,command=lambda: q5(x))
+                button_17.pack()
+                def q5(n):
+                  global griff 
+                  global sly
+                  global raven
+                  global huff
+                  global button_11
+                  global done 
+      
+                  if n == 'HELGA HUFFLEPUFF':
+                    huff += 10;
+                  else:
+                    huff -= 3
+                  e.destroy()
+                  question_5.destroy()
+                  button_17.destroy()
+                              
+                  button_11 = Button(window, text= "Who won?",font=("Times new roman", 25), padx= 60, pady=30,borderwidth=4,command= veri)
+                  button_11.place(x = 295, y = 140)
         
 def veri():
   global griff 
