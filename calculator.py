@@ -14,7 +14,7 @@ def Calculate(n):
 
 def clear():
     e.delete(0,END)
-
+  
 def adding():
     fn = e.get()
     global f_num 
@@ -50,14 +50,15 @@ def divide():
 def Equal():
     sn = e.get()
     e.delete(0,END)
-    if math == 'Addition':
+    if math == "Addiiton":
        e.insert(0, f_num + int(sn))
     if math == 'Subtraction':
        e.insert(0, f_num - int(sn))
-    if math == 'Multiplicaion':
-       e.insert(0, f_num * int(sn))
+    if math == "Multiplication":
+       e.insert(0, f_num*int(sn))
     if math == 'Division':
        e.insert(0, f_num / int(sn))
+    
 
 #defining buttons
 button_1= Button(window, 
