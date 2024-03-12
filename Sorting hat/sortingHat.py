@@ -1,9 +1,14 @@
 from tkinter import *
+from PIL import ImageTk,Image
 
 
 window = Tk()
+window.iconbitmap("hat.ico")
 window.title("Sorting hat")
-window.geometry("900x400")
+window.geometry("900x514")
+
+image2 = ImageTk.PhotoImage(Image.open("2.png"))
+
 
 def intro_next():
 
@@ -12,14 +17,22 @@ def intro_next():
 
   global intro
   global intro_button
-  
+  global one
+  global two
+
+  one.destroy()
   intro.destroy()
   intro_button.destroy()
 
-  house = Label(window, text = "Let's put you in a house\nWith the Sorting Hat",font=("Times new Roman",25))
+  
+  two = Label(image = image2)
+  
+
+  house = Label(window, text = "Let's put you in a house\nWith the Sorting Hat",font=("Times new Roman",18))
   house.pack()
-  letsgo = Button(window, text= "LESSGOOOO", padx= 40, pady=20,borderwidth=4,command= putting_house)
+  letsgo = Button(window, text= "LESSGOOOO", padx= 40, pady=12,borderwidth=4,command= putting_house)
   letsgo.pack()
+  two.pack()
 
 def putting_house():
     global house
@@ -31,15 +44,19 @@ def putting_house():
 
     global intro
     global intro_button
+    global two
     
     house.destroy()
     letsgo.destroy()
-
+    two.destroy()
+    
     question_1 = Label(window, text = "Q1) Do you like dawn or dusk?",font=("Times new Roman",25) )
     question_1.pack()
 
     button_1 = Button(window, text= "a) Dusk", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dusk"))
     button_2 = Button(window, text= "b) Dawn", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dawn"))
+    
+
     button_1.pack()
     button_2.pack()
    
@@ -54,6 +71,7 @@ def q1(n):
     global question_1
     global button_1
     global button_2
+  
 
     global question_2
     global button_3
@@ -75,6 +93,7 @@ def q1(n):
     question_1.destroy()
     button_1.destroy()
     button_2.destroy() 
+    
     question_2 = Label(window, text = "Q2) When I'm dead, I want people to remember me as:",font=("Times new Roman",25) )
     question_2.pack()
     button_3 = Button(window, text= "1) The Good", padx= 40, pady=20,borderwidth=4,command=lambda: q2( "good"))
@@ -245,7 +264,7 @@ def q5(n):
   question_5.destroy()
   button_17.destroy()
   
-  question_6 = Label(window, text="Q6) Who is the ghost of Gryffindor?")
+  question_6 = Label(window, text="Q6) Who is the ghost of Gryffindor?",font = ("Times new Roman", 25))
   question_6.pack()
 
   button_18 = Button(window, text= "1) Fat Friar", padx= 54, pady=20,borderwidth=4,command= lambda: q6("fat"))
@@ -293,6 +312,7 @@ def veri():
   global button_11
   global button_12
   global done
+  global button_quit
 
   dic = {"Griffindor" : griff,"Hufflepuff": huff, "Ravenclaw" : raven, "Slytherin" : sly} 
 
@@ -306,16 +326,19 @@ def veri():
   done = Label(window,text="Congratulations! You're a " + win.upper(),font=("Times new Roman",25))
   done.place(x = 180, y = 150)
   button_11.destroy()
-  button_12 = Button(window, text= "Reset", padx= 45, pady=20,borderwidth=4,command= reset)
+  button_12 = Button(window, text= "Reset", padx= 43, pady=10,borderwidth=4,command= reset)
   button_12.pack(side= "bottom")
+  button_quit = Button(window, text = "Quit",padx= 45, pady=10,borderwidth=4, command = window.quit)
+  button_quit.pack(side= "bottom")
 
 def reset():
     global button_12
     global done
     global intro
     global intro_button
+    global button_quit
     
-
+    button_quit.destroy()
     done.destroy()
     button_12.destroy()
     intro = Label(window, text = "Welcome to Howgwarts",font=("Times new Roman",25))
@@ -323,23 +346,15 @@ def reset():
     intro_button = Button(window, text= "Next", padx= 40, pady=20,borderwidth=4,command=intro_next) 
     intro_button.pack()
 
-    # question_1 = Label(window, text = "Q1) Do you like dawn or dusk?",font=("Times new Roman",25) )
-    # question_1.pack()
+image1 = ImageTk.PhotoImage(Image.open("1.png"))
+one = Label(image = image1)
 
-    # button_1 = Button(window, text= "a) Dusk", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dusk"))
-    # button_2 = Button(window, text= "b) Dawn", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dawn"))
-    # button_1.pack()
-    # button_2.pack()
-   
-
-        
 
 intro = Label(window, text = "Welcome to Howgwarts",font=("Times new Roman",25))
 intro.pack()
 intro_button = Button(window, text= "Next", padx= 40, pady=20,borderwidth=4,command=intro_next) 
 intro_button.pack()
-
-
+one.pack()
 
 
 
