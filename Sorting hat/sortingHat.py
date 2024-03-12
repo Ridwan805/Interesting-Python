@@ -8,6 +8,7 @@ window.title("Sorting hat")
 window.geometry("900x514")
 
 image2 = ImageTk.PhotoImage(Image.open("2.png"))
+image3 = ImageTk.PhotoImage(Image.open("3.png"))
 
 
 def intro_next():
@@ -45,10 +46,13 @@ def putting_house():
     global intro
     global intro_button
     global two
+    global three
     
     house.destroy()
     letsgo.destroy()
     two.destroy()
+
+    three = Label(window, image= image3)
     
     question_1 = Label(window, text = "Q1) Do you like dawn or dusk?",font=("Times new Roman",25) )
     question_1.pack()
@@ -56,10 +60,10 @@ def putting_house():
     button_1 = Button(window, text= "a) Dusk", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dusk"))
     button_2 = Button(window, text= "b) Dawn", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dawn"))
     
-
+    
     button_1.pack()
     button_2.pack()
-   
+    three.pack()
     
 def q1(n):
     
@@ -71,6 +75,7 @@ def q1(n):
     global question_1
     global button_1
     global button_2
+    global three
   
 
     global question_2
@@ -90,9 +95,11 @@ def q1(n):
     else:
         sly = 2
         raven = 2 
+
     question_1.destroy()
     button_1.destroy()
     button_2.destroy() 
+    three.destroy()
     
     question_2 = Label(window, text = "Q2) When I'm dead, I want people to remember me as:",font=("Times new Roman",25) )
     question_2.pack()
