@@ -9,6 +9,7 @@ window.geometry("900x514")
 
 image2 = ImageTk.PhotoImage(Image.open("2.png"))
 image3 = ImageTk.PhotoImage(Image.open("3.png"))
+image4 = ImageTk.PhotoImage(Image.open("4.png"))
 
 
 def intro_next():
@@ -57,8 +58,8 @@ def putting_house():
     question_1 = Label(window, text = "Q1) Do you like dawn or dusk?",font=("Times new Roman",25) )
     question_1.pack()
 
-    button_1 = Button(window, text= "a) Dusk", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dusk"))
-    button_2 = Button(window, text= "b) Dawn", padx= 40, pady=20,borderwidth=4,command=lambda: q1( "Dawn"))
+    button_1 = Button(window, text= "a) Dusk", padx= 41, pady=10,borderwidth=4,command=lambda: q1( "Dusk"))
+    button_2 = Button(window, text= "b) Dawn", padx= 40, pady=10,borderwidth=4,command=lambda: q1( "Dawn"))
     
     
     button_1.pack()
@@ -75,7 +76,10 @@ def q1(n):
     global question_1
     global button_1
     global button_2
+
     global three
+    global four
+
   
 
     global question_2
@@ -101,22 +105,29 @@ def q1(n):
     button_2.destroy() 
     three.destroy()
     
+    four = Label(window,image= image4)
+
     question_2 = Label(window, text = "Q2) When I'm dead, I want people to remember me as:",font=("Times new Roman",25) )
     question_2.pack()
-    button_3 = Button(window, text= "1) The Good", padx= 40, pady=20,borderwidth=4,command=lambda: q2( "good"))
+    button_3 = Button(window, text= "1) The Good", padx= 42, pady=20,borderwidth=4,command=lambda: q2( "good"))
     button_4 = Button(window, text= "2) The Great", padx= 40, pady=20,borderwidth=4,command=lambda: q2( "great"))
-    button_5 = Button(window, text= "3) The Wise", padx= 40, pady=20,borderwidth=4,command=lambda: q2( "wise"))
-    button_6 = Button(window, text= "4) The Bold", padx= 40, pady=20,borderwidth=4,command=lambda: q2( "bold"))
-    button_3.pack()
-    button_4.pack()
-    button_5.pack()
-    button_6.pack()
+    button_5 = Button(window, text= "3) The Wise", padx= 43, pady=20,borderwidth=4,command=lambda: q2( "wise"))
+    button_6 = Button(window, text= "4) The Bold", padx= 44, pady=20,borderwidth=4,command=lambda: q2( "bold"))
+    button_3.place(x= 180,y= 70 )
+    button_4.place(x = 600 ,y= 70)
+    button_5.place(x = 180,y=340)
+    button_6.place(x = 600,y=340)
+
+    four.pack()
 
 def q2(n):
     global griff 
     global sly
     global raven
     global huff
+
+    global four
+    global five
 
     global question_2
     global button_3
@@ -145,6 +156,8 @@ def q2(n):
     button_4.destroy()
     button_5.destroy()
     button_6.destroy()
+    four.destroy()
+    
     question_3 = Label(window, text = "Q3) Which kind of instrument most pleases your ear?",font=("Times new Roman",25) )
     question_3.pack()
     button_7 = Button(window, text= "1) The violin", padx= 45, pady=20,borderwidth=4,command=lambda: q3( "violin"))
@@ -344,14 +357,19 @@ def reset():
     global intro
     global intro_button
     global button_quit
+
+    global one
     
+    one = Label(image = image1)
     button_quit.destroy()
     done.destroy()
     button_12.destroy()
+
     intro = Label(window, text = "Welcome to Howgwarts",font=("Times new Roman",25))
     intro.pack()
     intro_button = Button(window, text= "Next", padx= 40, pady=20,borderwidth=4,command=intro_next) 
     intro_button.pack()
+    one.pack()
 
 image1 = ImageTk.PhotoImage(Image.open("1.png"))
 one = Label(image = image1)
