@@ -17,7 +17,8 @@ https://github.com/Ridwan805/Ridwan805/assets/154875891/92bfedd4-dc9e-4b91-b8e9-
 pip3 install PILLOW
 ```
 <br>
-
-Pillow is for Images and Tkinter is for the GUI
+<b>Pillow is for Images and Tkinter is for the GUI</b>
 </p>
+
+
 
