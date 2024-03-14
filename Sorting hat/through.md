@@ -1,24 +1,5 @@
 ### The interface
 
-![Sorting Hat](./images/1.png)
-
-![Sorting Hat](./images/2.png)
-
-![Sorting Hat](./images/3.png)
-
-![Sorting Hat](./images/4.png)
-
-![Sorting Hat](./images/5.png)
-
-![Sorting Hat](./images/6.png)
-
-![Sorting Hat](./images/7.png)
-
-![Sorting Hat](./images/8.png)
-
-![Sorting Hat](./images/9.png)
-
-![Sorting Hat](./images/10.png)
+https://github.com/Ridwan805/Ridwan805/assets/154875891/92bfedd4-dc9e-4b91-b8e9-bdebe7437db7
 
 
-# Will add background image and more later
