@@ -31,6 +31,12 @@ Trying to do some things with Tkinter and random library of Python
         </p>
         <img src = "./images/icon.png" width = "350">
      </li>
+     <li align = "center">
+        <p>
+            <h2>For Image</h2>
+        </p>
+        <img src = "./images/image.png" width = "650">
+     </li>
 
    </ul>
    
