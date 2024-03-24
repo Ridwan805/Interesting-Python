@@ -19,21 +19,19 @@ Trying to do some things with Tkinter and random library of Python
         </p>
         <img src = "./images/button.png" width = "350">
      </li>
-
      <li align = "center">
         <p>
             <h2>For Entry</h2>
         </p>
         <img src = "./images/Entry.png" width = "350">
      </li>
-
      <li align = "center">
         <p>
             <h2>For Icon</h2>
         </p>
         <img src = "./images/icon.png" width = "350">
      </li>
-     
+
    </ul>
    
 </div>
