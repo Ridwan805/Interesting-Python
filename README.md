@@ -13,9 +13,9 @@ Trying to do some things with Tkinter and random library of Python
 <div align="center">
    <h1>Python Tkinter Runthrough</h1>
    <ul align = "center" >
-     <li align = "center"><p>For Buttons</p><img src = "./images/button.png"></li>
-     <li align = "center"><p>For Entry</p><img src = "./images/Entry.png"></li>
-     <li align = "center"><p>For Icon</p><img src = "./images/icon.png"></li>
+     <li align = "center"><p><h2>For Buttons</h2></p><img src = "./images/button.png"></li>
+     <li align = "center"><p><h2>For Entry</h2></p><img src = "./images/Entry.png"></li>
+     <li align = "center"><p><h2>For Icon</h2></p><img src = "./images/icon.png"></li>
    </ul>
    
 </div>
