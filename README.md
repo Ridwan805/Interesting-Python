@@ -35,7 +35,7 @@ Trying to do some things with Tkinter and random library of Python
         <p>
             <h2>For Image</h2>
         </p>
-        <img src = "./images/image.png" width = "650">
+        <img src = "./images/image.png" width = "400">
      </li>
 
    </ul>
