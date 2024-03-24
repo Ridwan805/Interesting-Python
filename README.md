@@ -12,10 +12,10 @@ Trying to do some things with Tkinter and random library of Python
 
 <div align="center">
    <h1>Python Tkinter Runthrough</h1>
-   <ul>
-     <li><p>For Buttons</p><img src = "./images/button.png"></li>
-     <li><p>For Entry</p><img src = "./images/Entry.png"></li>
-     <li><p>For Icon</p><img src = "./images/icon.png"></li>
+   <ul align = "center" >
+     <li align = "center"><p>For Buttons</p><img src = "./images/button.png"></li>
+     <li align = "center"><p>For Entry</p><img src = "./images/Entry.png"></li>
+     <li align = "center"><p>For Icon</p><img src = "./images/icon.png"></li>
    </ul>
    
 </div>
