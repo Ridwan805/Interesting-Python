@@ -21,7 +21,7 @@ abutt = Button(window,text = "What is your name? ",
                bg="black",
                activebackground="black", 
                activeforeground= "white",
-               command= clicked)
+               command= clicked
 abutt.pack()
 
 window.title("buttons and there works")
