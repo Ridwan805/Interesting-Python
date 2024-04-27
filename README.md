@@ -1,5 +1,5 @@
 
-<div align="center">
+<!--<div align="center">
    <h1>Python Tkinter Runthrough</h1>
    <ul align = "center" >
      <li align = "center">
@@ -29,4 +29,4 @@
 
    </ul>
    
-</div>
+</div>-->
